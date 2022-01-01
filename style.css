@@ -5,37 +5,27 @@
 }
 
 .grid-container {
-	height: 400px;
-	width: 400px;
+	height: 520px;
+	width: 520px;
 	background-color: red;
 }
 
 .grid {
-	background-color: black;
-	/* Width is combined cell width plus combined margin width. */
-	width: 354px;
+	background-color: lightgrey;
+	/* Width is the sum of all cell widths */
+	width: 480px;
 }
 
 .row {
 	display: flex;
-	gap: 2px;
 }
 
 .cell {
-	height: 20px;
-	width: 20px;
+	height: 30px;
+	width: 30px;
 	background-color: grey;
-	margin-top: 2px
 }
 
-.cell-bottom {
-	margin-bottom: 2px;
-}
-
-.cell-left {
-	margin-left: 2px;
-}
-
-.cell-right {
-	margin-right: 2px;
+.cell.coloured {
+	background-color: black;
 }

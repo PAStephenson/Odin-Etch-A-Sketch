@@ -12,22 +12,21 @@ function createGrid() {
 			let cell = document.createElement("div");
 			cell.classList.add("cell");
 			rows.appendChild(cell);
-
-			if (i == gridHeight - 1) {
-				cell.classList.add("cell-bottom");
-			}
-
-			if (j == 0) {
-				cell.classList.add("cell-left");
-			}
-
-			if (j == gridWidth - 1) {
-				cell.classList.add("cell-right");
-			}
 		}
 
 		grid.appendChild(rows);
 	}
 }
 
+function colourCell(cell) {
+	cell.classList.add("coloured");
+}
+
 createGrid();
+
+const cells = document.querySelectorAll(".cell");
+
+cells.forEach((cell) => {cell.addEventListener("mouseover", () => {
+		colourCell(cell);
+	});
+});
