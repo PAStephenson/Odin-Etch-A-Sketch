@@ -10,27 +10,27 @@
 }
 
 .grid-container {
-	height: 520px;
-	width: 520px;
+	height: 640px;
+	width: 640px;
 	background-color: red;
+	margin: 20px;
 }
 
 .grid {
-	background-color: lightgrey;
-	/* Width is the sum of all cell widths */
-	width: 480px;
-}
-
-.row {
-	display: flex;
+	display: grid;
+	background-color: grey;
+	height: 600px;
+	width: 600px;
 }
 
 .cell {
-	height: 30px;
-	width: 30px;
 	background-color: grey;
 }
 
 .cell.coloured {
 	background-color: black;
+}
+
+.grid-buttons {
+	margin: 20px;
 }
