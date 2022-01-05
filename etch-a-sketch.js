@@ -1,23 +1,30 @@
-// User interface variables
 const grid = document.querySelector("#grid");
 const slider = document.querySelector("#slider");
 const sliderValue = document.querySelector("#sliderValue");
 const btnReset = document.querySelector("#btnReset");
+const drawingMode = document.querySelector("#drawingMode");
+const btnDraw = document.querySelector("#btnDraw");
+const btnErase = document.querySelector("#btnErase");
 
 slider.addEventListener("input", () => {updateSlider()});
 slider.addEventListener("change", () => {updateGrid()});
 btnReset.addEventListener("click", () => {updateGrid()});
+btnDraw.addEventListener("click", () => {switchMode("draw")});
+btnErase.addEventListener("click", () => {switchMode("erase")});
 
-// Grid variables
+// Number of cell along each side of the grid
 let size = 16;
+// Default mode (draw on the grid)
+let mode = "draw";
 
 function createGrid() {
+	grid.setAttribute("style", `grid-template-columns: repeat(${size}, 1fr)`);
+
 	for (let i = 0; i < (size * size); i++) {
 		let cell = document.createElement("div");
 		cell.classList.add("cell");
 		grid.appendChild(cell);
 	}
-	grid.setAttribute("style", `grid-template-columns: repeat(${size}, 1fr)`);
 
 	const cells = document.querySelectorAll(".cell");
 	cells.forEach((cell) => {cell.addEventListener("mouseover", () => {colourCell(cell)})});
@@ -38,13 +45,26 @@ function updateGrid() {
 	createGrid();
 }
 
+function switchMode(newMode) {
+	if (newMode == "draw") {
+		mode = "draw";
+		drawingMode.textContent = "Draw";
+	} else if (newMode == "erase") {
+		mode = "erase";
+		drawingMode.textContent = "Erase";
+	}
+}
+
 function colourCell(cell) {
-	cell.classList.add("coloured");
+	if (mode == "draw") {
+		cell.classList.add("coloured");
+	} else if (mode == "erase") {
+		cell .classList.remove("coloured");
+	}
 }
 
 function updateSlider() {
 	sliderValue.textContent = `${slider.value} \u00D7 ${slider.value}`;
 }
 
-// Create the grid and add event listeners to each cell
 createGrid();
