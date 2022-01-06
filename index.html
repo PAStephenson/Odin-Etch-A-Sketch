@@ -7,18 +7,32 @@
 		<script src="etch-a-sketch.js" defer></script>
 	</head>
 	<body>
-		<main>
+		<header>
+			<h1>Etch A Sketch</h1>
+		</header>
+		<main class="flex">
+			<div class="grid-buttons">
+				<div class="mode">
+					<div id="drawingMode" class="value">Draw</div>
+					<div class="flex mode-buttons">
+						<button id="btnDraw" class="grid-button">Draw</button>
+						<button id="btnErase" class="grid-button">Erase</button>
+					</div>
+				</div>
+				<div class="slider-controls">
+					<div id="sliderValue" class="value">16 &times; 16</div>
+					<input id="slider" autocomplete="off" type="range" min="1" max="100" value="16">
+				</div>
+				<div class="reset-button">
+					<button id="btnReset" class="grid-button">Reset Grid</button>
+				</div>
+			</div>
 			<div class="grid-container flex">
 				<div id="grid" class="grid"></div>
 			</div>
-			<div class="grid-buttons">
-				<button id="btnReset">Reset Grid</button>
-				<div id="drawingMode">Draw</div>
-				<button id="btnDraw">Draw</button>
-				<button id="btnErase">Erase</button>
-				<div id="sliderValue">16 &times; 16</div>
-				<input id="slider" autocomplete="off" type="range" min="1" max="100" value="16">
-			</div>
 		</main>
+		<footer>
+			<p>Made by <a href="https://github.com/PAStephenson">PAStephenson</a> while following <a href="https://www.theodinproject.com">The Odin Project</a></p>
+		</footer>
 	</body>
 </html>

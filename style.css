@@ -1,6 +1,46 @@
-* {
+html {
+	/* Needed for footer */
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
 	margin: 0px;
 	border: 0px;
+	font-family: sans-serif;
+	text-align: center;
+	color: #ECEFF4;
+	background-color: #3B4252;
+	/* Needed for footer */
+	min-height: 100%;
+}
+
+/* Header */
+header {
+	margin-bottom: 25px;
+	background-color: #2E3440;
+}
+
+h1 {
+	font-size: 45px;
+	font-weight: bold;
+	color: #EBCB8B;
+}
+
+/* Main */
+
+button {
+	border: none;
+	border-radius: 8px;
+	padding: 6px 12px;
+	font-size: 16px;
+	color:  #E5E9F0;
+	background-color: #8FBCBB;
+}
+
+button:hover {
+	background-color: #88C0D0;
 }
 
 .flex {
@@ -9,28 +49,71 @@
 	justify-content: center;
 }
 
+.mode,
+.slider-controls,
+.reset-button {
+	margin: 10px;
+	padding: 10px;
+	border-radius: 8px;
+	background-color: #5E81AC;
+
+}
+
+.grid-buttons {
+	border-radius: 8px;
+	background-color: #5E81AC;
+}
+
+.mode-buttons {
+	gap: 20px;
+}
+
+.value {
+	margin-bottom: 10px;
+	font-size: 24px;
+}
+
 .grid-container {
-	height: 640px;
-	width: 640px;
-	background-color: red;
 	margin: 20px;
+	border-radius: 8px;
+	height: 540px;
+	width: 540px;
+	background-color: #5E81AC;
 }
 
 .grid {
 	display: grid;
-	background-color: grey;
-	height: 600px;
-	width: 600px;
+	height: 500px;
+	width: 500px;
+	background-color: #D8DEE9;
 }
 
 .cell {
-	background-color: grey;
+	background-color: #D8DEE9;
 }
 
 .cell.coloured {
-	background-color: black;
+	background-color: #2E3440;
 }
 
 .grid-buttons {
 	margin: 20px;
+}
+
+
+/* Footer */
+
+footer {
+	margin-top: auto;
+	padding: 20px;
+	font-size: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: #D8DEE9;
+}
+
+a:hover {
+	color: #8FBCBB;
 }
