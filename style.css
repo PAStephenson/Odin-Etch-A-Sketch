@@ -117,3 +117,50 @@ a {
 a:hover {
 	color: #8FBCBB;
 }
+
+/* Input range slider */
+
+/* Removes browser default styling */
+input[type=range] {
+	-webkit-appearance: none;
+	width: 100%;
+	background: transparent;
+}
+
+/* Thumb styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+	cursor: pointer;
+	margin-top: -4px;
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	background: #D8DEE9;
+}
+
+/* Thumb styling for Firefox */
+input[type=range]::-moz-range-thumb {
+	cursor: pointer;
+	height: 16px;
+	width: 16px;
+	border: 1px solid #D8DEE9;
+	border-radius: 50%;
+	background: #D8DEE9;
+}
+
+/* Track styling for WebKit/Blink */
+input[type=range]::-webkit-slider-runnable-track {
+	cursor: pointer;
+	height: 8px;
+	width: 100%;
+	border-radius: 3px;
+	background: #8FBCBB;
+}
+
+/* Track styling for Firefox */
+input[type=range]::-moz-range-track {
+	cursor: pointer;
+	height: 8px;
+	width: 100%;
+	border-radius: 3px;
+	background: #8FBCBB;
+}
