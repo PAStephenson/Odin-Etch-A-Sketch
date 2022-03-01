@@ -1,4 +1,4 @@
-# Odin-Etch-A-Sketch
+# Odin Etch A Sketch
 A browser version of the classic Etch A Sketch toy.
 
 ## [Live Preview](https://pastephenson.github.io/Odin-Etch-A-Sketch/)
